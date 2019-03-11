@@ -1,0 +1,16 @@
+{
+	"state": "production",
+	"organization": "gearboxworks",
+	"name": "composer",
+	"version": "1.4.3",
+	"majorversion": "1.4",
+	"latest": "",
+	"class": "system",
+	"network": "--network gearboxnet",
+	"ports": "",
+	"volumes": "",
+	"restart": "--restart no",
+	"args": "--user gearbox:gearbox",
+	"env": "COMPOSER_VERSION"
+}
+

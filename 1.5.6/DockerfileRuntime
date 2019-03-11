@@ -1,0 +1,5 @@
+FROM composer:1.5.6
+MAINTAINER Gearbox Team <team@gearbox.works>
+
+COPY gearbox.json /etc/gearbox.json
+COPY files /
