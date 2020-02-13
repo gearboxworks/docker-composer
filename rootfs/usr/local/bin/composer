@@ -2,8 +2,8 @@
 
 check_image()
 {
-	VERSION="gearbox/composer:$REQVERS"
-	EXISTS="`docker images -q $VERSION 2>/dev/null`"
+	VERSION="gearboxworks/composer:$REQVERS"
+	EXISTS="$(docker images -q $VERSION 2>/dev/null)"
 
 	if [ "$EXISTS" == "" ]
 	then
@@ -11,7 +11,7 @@ check_image()
 		if [ "$?" == "0" ]
 		then
 			echo "Gearbox: Need to retrieve $VERSION from repository. Please wait..."
-			/usr/bin/docker pull $VERSION
+			${DOCKER} pull $VERSION
 		else
 			echo "Gearbox: ERROR: Version $VERSION doesn't exist in repository."
 			exit
@@ -19,11 +19,11 @@ check_image()
 	fi
 }
 
-
-SCRIPT="`basename $0`"
-REQVERS="`echo $SCRIPT | sed -r 's/composer-([0-9]*\.[0-9]*)/\1/'`"
-EXEC="/usr/local/bin/composer-$REQVERS"
-
+DOCKER="$(which docker)"
+DIR="$(dirname $0)"
+SCRIPT="$(basename $0)"
+REQVERS="$(echo $SCRIPT | sed -E 's/composer-([0-9]*\.[0-9]*)/\1/')"
+EXEC="${DIR}/composer-$REQVERS"
 
 if [ -x "$EXEC" ]
 then
@@ -34,6 +34,6 @@ then
 	check_image
 fi
 
-exec /usr/bin/docker run --rm -it --name "composer-$REQVERS" --user gearbox:gearbox --volume $PROJECT_ROOT:/project $VERSION "$@"
+exec ${DOCKER} run --rm -it --name "composer-$REQVERS" --user gearbox:gearbox --volume ${PROJECT_ROOT}:/project ${VERSION} composer "$@"
 # --network gearboxnet
 
