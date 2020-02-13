@@ -2,15 +2,15 @@
 	"state": "production",
 	"organization": "gearboxworks",
 	"name": "composer",
-	"version": "1.5.6",
-	"majorversion": "1.5",
+	"version": "1.8.6",
+	"majorversion": "1.8",
 	"latest": "",
-	"class": "system",
+	"class": "cli",
 	"network": "--network gearboxnet",
-	"ports": "",
+	"ports": "-P",
 	"volumes": "",
 	"restart": "--restart no",
-	"args": "--user gearbox:gearbox",
+	"args": "",
 	"env": "COMPOSER_VERSION"
 }
 
