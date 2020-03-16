@@ -1,3 +1,5 @@
+![release](https://github.com/gearboxworks/docker-composer/workflows/release/badge.svg?event=release)
+
 ![Composer 1.6.x](https://img.shields.io/badge/Composer-1.6.x-green.svg)
 ![Composer 1.5.x](https://img.shields.io/badge/Composer-1.5.x-green.svg)
 ![Composer 1.4.x](https://img.shields.io/badge/Composer-1.4.x-green.svg)
