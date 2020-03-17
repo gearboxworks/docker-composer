@@ -1,0 +1,73 @@
+[1m[36mGearbox[[37;1m/bin/bash[36m]: [36m# You have entered the docker-composer Docker container.[0m
+[1m[36mGearbox[[37;1m/bin/bash[36m]: [36m# All changes made here outside of /home/gearbox/projects will not be permanent.[0m
+
+[1m[36mGearbox[[37;1m/bin/bash[36m]: [33m# WARNING: Currently the project base directory has NOT been mounted.[0m
+[1m[36mGearbox[[37;1m/bin/bash[36m]: [33m#  - /home/gearbox/projects/default[0m
+
+/etc/gearbox/unit-tests/composer/.03-composer.sh.swp: /etc/gearbox/unit-tests/composer/.03-composer.sh.swp: cannot execute binary file
+[1m[36mGearbox[[37;1mcomposer[36m]: [37;1mRelease test started.[0m
+1000
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/composer/01-base.sh[36m]: [32mGearbox user found.[0m
+1000
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/composer/01-base.sh[36m]: [32mGearbox group found.[0m
+[1m[36mGearbox[[37;1mcomposer[36m]: [37;1mRelease test finished.[0m
+[1m[36mGearbox[[37;1mcomposer-1.10.0[36m]: [37;1mRelease test started.[0m
+PID   USER     TIME  COMMAND
+    1 root      0:00 /bin/s6-svscan /etc/gearbox/services
+   20 root      0:00 s6-supervise GearShift
+   21 root      0:00 s6-supervise sshd
+   22 root      0:00 s6-supervise composer
+   23 root      0:00 {GearboxGearshif} /bin/bash /usr/local/sbin/GearboxGearshift
+   24 root      0:00 /usr/sbin/sshd -D -e
+   41 root      0:00 sleep 99999999
+   45 root      0:00 {finish} /bin/bash -l ./finish 0 0
+   46 root      0:00 sleep 5
+   47 root      0:00 sshd: gearbox [priv]
+   49 gearbox   0:00 sshd: gearbox@notty
+   50 gearbox   0:00 {run.sh} /bin/bash -l /etc/gearbox/unit-tests/run.sh
+   90 gearbox   0:00 bash -l /etc/gearbox/unit-tests/composer/02-release.sh
+   95 gearbox   0:00 ps -eaf
+[1m[36mGearbox[[37;1mcomposer-1.10.0[36m]: [37;1mRelease test finished.[0m
+[1m[36mGearbox[[37;1mcomposer[36m]: [37;1mtest started.[0m
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/composer/03-composer.sh[36m]: [32mComposer found.[0m
+Composer version 1.10.0 2020-03-10 14:08:05
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/composer/03-composer.sh[36m]: [32mComposer version OK.[0m
+Composer - Dependency Manager for PHP
+Composer is a dependency manager tracking local dependencies of your projects and libraries.
+See https://getcomposer.org/ for more information.
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/composer/03-composer.sh[36m]: [32mComposer about OK.[0m
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Nothing to install or update
+Writing lock file
+Generating autoload files
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/composer/03-composer.sh[36m]: [32mComposer update OK.[0m
+php  7.4.3    success  
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/composer/03-composer.sh[36m]: [32mComposer check-platform-reqs OK.[0m
+[1m[36mGearbox[[37;1mcomposer[36m]: [37;1mtest finished.[0m
+[1m[36mGearbox[[37;1mgearbox-base[36m]: [37;1mRelease test started.[0m
+1000
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/gearbox-base/01-base.sh[36m]: [32mGearbox user found.[0m
+1000
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/gearbox-base/01-base.sh[36m]: [32mGearbox group found.[0m
+[1m[36mGearbox[[37;1mgearbox-bease[36m]: [37;1mRelease test finished.[0m
+[1m[36mGearbox[[37;1mgearbox-base-alpine-3.10[36m]: [37;1mRelease test started.[0m
+PID   USER     TIME  COMMAND
+    1 root      0:00 /bin/s6-svscan /etc/gearbox/services
+   20 root      0:00 s6-supervise GearShift
+   21 root      0:00 s6-supervise sshd
+   22 root      0:00 s6-supervise composer
+   23 root      0:00 {GearboxGearshif} /bin/bash /usr/local/sbin/GearboxGearshift
+   24 root      0:00 /usr/sbin/sshd -D -e
+   41 root      0:00 sleep 99999999
+   47 root      0:00 sshd: gearbox [priv]
+   49 gearbox   0:00 sshd: gearbox@notty
+   50 gearbox   0:00 {run.sh} /bin/bash -l /etc/gearbox/unit-tests/run.sh
+  170 root      0:00 {finish} /bin/bash -l ./finish 0 0
+  171 root      0:00 sleep 5
+  212 gearbox   0:00 bash -l /etc/gearbox/unit-tests/gearbox-base/02-release.sh
+  217 gearbox   0:00 ps -eaf
+[1m[36mGearbox[[37;1mgearbox-base-alpine-3.10[36m]: [37;1mRelease test finished.[0m
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/gearbox-base/02-sshd.sh[36m]: [37;1mCheck SSHD[0m
+/proc/24/cmdline:/usr/sbin/sshd
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/gearbox-base/02-sshd.sh[36m]: [32mSSHD running[0m
