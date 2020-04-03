@@ -1,4 +1,4 @@
-![Gearbox](https://raw.githubusercontent.com/gearboxworks/gearboxworks.github.io/master/assets/images/gearbox-logo.png)
+![Gearbox](https://gearboxworks.github.io/assets/images/gearbox-logo.png)
 
 
 # composer Docker container service for [Gearbox](https://github.com/gearboxworks/)
@@ -74,9 +74,9 @@ Create, and start the composer Gearbox container. Run a shell.
 
 `./bin/gb-launch -gb-name composer -gb-shell`
 
-Create, and start the composer Gearbox container with version 1.3.3 and run a shell.
+Create, and start the composer Gearbox container with version 1.4.3 and run a shell.
 
-`./bin/gb-launch -gb-name composer -gb-version 1.3.3 -gb-shell`
+`./bin/gb-launch -gb-name composer -gb-version 1.4.3 -gb-shell`
 
 If composer is symlinked to `gb-launch`, then you can drop the `-gb-name` flag.
 
@@ -86,18 +86,18 @@ Running composer Gearbox container default command. If a container has a default
 
 `./bin/composer -flag1 -flag2 variable`
 
-`./bin/gb-launch -gb-name composer -gb-version 1.3.3 -flag1 -flag2 variable`
+`./bin/gb-launch -gb-name composer -gb-version 1.4.3 -flag1 -flag2 variable`
 
 
 Running alternate commands within the composer Gearbox container.
 
 `./bin/composer -gb-shell -- ls -l`
 
-`./bin/gb-launch -gb-name composer -gb-version 1.3.3 -gb-shell -- ls -l`
+`./bin/gb-launch -gb-name composer -gb-version 1.4.3 -gb-shell -- ls -l`
 
 `./bin/composer -gb-shell -- ps -eaf`
 
-`./bin/gb-launch -gb-name composer -gb-version 1.3.3 -gb-shell -- ps -eaf`
+`./bin/gb-launch -gb-name composer -gb-version 1.4.3 -gb-shell -- ps -eaf`
 
 
 ssh - All [Gearbox](https://github.com/gearboxworks/) containers have a running SSH daemon. So you can connect remotely.
