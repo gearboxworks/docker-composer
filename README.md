@@ -40,8 +40,8 @@ However, due to the flexability of Gearbox, it can be used outside of this frame
 
 There are three methods:
 
-## Method 1: Using gb-launch
-`gb-launch` is a tool specifically designed to interact with a Gearbox Docker container.
+## Method 1: Using launch
+`launch` is a tool specifically designed to interact with a Gearbox Docker container.
 
 It provides three important functional areas, without any Docker container learning curve:
 - Allows control over Gearbox Docker containers: stop, start, create, remove.
@@ -52,15 +52,18 @@ It also provides a functional SSH daemon for connecting remotely as well as a st
 
 
 ### Setup from GitHub repo
-`gb-launch` is currently in beta testing and is included along with all Gearbox Docker repos.
+`launch` is currently in beta testing and is included along with all Gearbox Docker repos.
 Once out of beta, it will be included within the Gearbox installation package.
 
-For now, simply clone this repository to your local machine.
+For now, simply download the `launch` binaries.
+- [Mac OSX 64bit](https://github.com/gearboxworks/docker-template/raw/master/bin/Darwin/launch)
+- [Linux 64bit](https://github.com/gearboxworks/docker-template/raw/master/bin/Linux/launch)
+- [Windows 64bit](https://github.com/gearboxworks/docker-template/raw/master/bin/Windows/launch)
 
 `git clone https://github.com/gearboxworks/docker-composer.git`
 
-### Running gb-launch
-There are many ways to call gb-launch, either directly or indirectly.
+### Running launch
+There are many ways to call launch, either directly or indirectly.
 Additionally, all host environment variables will be imported into the container seamlessly.
 This allows a devloper to try multiple versions of software as though they were installed locally.
 
@@ -68,17 +71,17 @@ If a container is missing, it will be downloaded and created. Multiple versions 
 
 Create, and start the composer Gearbox container.
 
-`./bin/gb-launch -gb-name composer`
+`./bin/launch -gb-name composer`
 
 Create, and start the composer Gearbox container. Run a shell.
 
-`./bin/gb-launch -gb-name composer -gb-shell`
+`./bin/launch -gb-name composer -gb-shell`
 
-Create, and start the composer Gearbox container with version 1.2.4 and run a shell.
+Create, and start the composer Gearbox container with version 1.7.3 and run a shell.
 
-`./bin/gb-launch -gb-name composer -gb-version 1.2.4 -gb-shell`
+`./bin/launch -gb-name composer -gb-version 1.7.3 -gb-shell`
 
-If composer is symlinked to `gb-launch`, then you can drop the `-gb-name` flag.
+If composer is symlinked to `launch`, then you can drop the `-gb-name` flag.
 
 `./bin/composer`
 
@@ -86,24 +89,24 @@ Running composer Gearbox container default command. If a container has a default
 
 `./bin/composer -flag1 -flag2 variable`
 
-`./bin/gb-launch -gb-name composer -gb-version 1.2.4 -flag1 -flag2 variable`
+`./bin/launch -gb-name composer -gb-version 1.7.3 -flag1 -flag2 variable`
 
 
 Running alternate commands within the composer Gearbox container.
 
 `./bin/composer -gb-shell -- ls -l`
 
-`./bin/gb-launch -gb-name composer -gb-version 1.2.4 -gb-shell -- ls -l`
+`./bin/launch -gb-name composer -gb-version 1.7.3 -gb-shell -- ls -l`
 
 `./bin/composer -gb-shell -- ps -eaf`
 
-`./bin/gb-launch -gb-name composer -gb-version 1.2.4 -gb-shell -- ps -eaf`
+`./bin/launch -gb-name composer -gb-version 1.7.3 -gb-shell -- ps -eaf`
 
 
 ssh - All [Gearbox](https://github.com/gearboxworks/) containers have a running SSH daemon. So you can connect remotely.
 To show what ports are exported to the host.
 
-`./bin/gb-launch -gb-name composer -gb-list`
+`./bin/launch -gb-name composer -gb-list`
 
 
 ## Method 2: GitHub repo
@@ -171,7 +174,7 @@ shell - Run a shell, (/bin/bash), within a Docker container.
 ### SSH
 ssh - All [Gearbox](https://github.com/gearboxworks/) containers have a running SSH daemon. So you can connect remotely.
 
-Either use `gb-launch` above or discover the port and SSH directly.
+Either use `launch` above or discover the port and SSH directly.
 
 
 ```

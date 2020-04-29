@@ -24,6 +24,9 @@
 		"restart": "--restart no"
 	},
 	"run": {
+		"commands": {
+			"default": "composer"
+		}
 	},
 	"project": {
 	},
