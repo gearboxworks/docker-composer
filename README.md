@@ -76,12 +76,18 @@ Create, and start the composer Gearbox container. Run a shell.
 
 `./launch shell composer`
 
-Create, and start the composer Gearbox container with version 1.10.0 and run a shell.
+Create, and start the composer Gearbox container with version 1.9.3 and run a shell.
 
-`./launch shell composer:1.10.0`
+`./launch shell composer:1.9.3`
 
-If composer is symlinked to `launch`, then the Gearbox container will be determined automatically.
-Symlinks will be created upon installation.
+`./launch shell composer:1.9.3 ls -l`
+
+`./launch shell composer:1.9.3 ps -eaf`
+
+
+### Available commands
+If composer is symlinked to `launch`, then the Gearbox container will be determined automatically and the default command will be run.
+All available commands for a Gearbox container will be automatically symlinked upon installation.
 
 `./composer`
 
@@ -89,18 +95,15 @@ Running composer Gearbox container default command. If a container has a default
 
 `./composer -flag1 -flag2 variable`
 
-`./launch composer:1.10.0 -flag1 -flag2 variable`
+`./launch composer:1.9.3 -flag1 -flag2 variable`
+
+Gearbox containers may have multiple executables that can be run. The composer Gearbox container has the following available commands:
+- The default command will execute `composer` within the container.
 
 
-Running alternate commands within the composer Gearbox container.
-
-`./launch shell composer:1.10.0 ls -l`
-
-`./launch shell composer:1.10.0 ps -eaf`
-
-
+### Remote connection
 ssh - All [Gearbox](https://github.com/gearboxworks/) containers have a running SSH daemon. So you can connect remotely.
-To show what ports are exported to the host.
+To show what ports are exported to the host, use the following command.
 
 `./launch list composer`
 
