@@ -25,7 +25,8 @@
 	},
 	"run": {
 		"commands": {
-			"default": "composer"
+			"default": "composer",
+			"composer": "composer"
 		}
 	},
 	"project": {
