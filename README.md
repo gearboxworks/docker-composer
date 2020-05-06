@@ -50,6 +50,7 @@ It provides three important functional areas, without any Docker container learn
 
 It also provides a functional SSH daemon for connecting remotely as well as a standard set of common tools and utilities.
 
+Further `launch` documentation can be [found here](https://github.com/gearboxworks/docker-template/blob/master/LAUNCH.md).
 
 ### Download launch
 `launch` is currently in beta testing and is included along with all Gearbox Docker repos.
@@ -76,13 +77,13 @@ Create, and start the composer Gearbox container. Run a shell.
 
 `./launch shell composer`
 
-Create, and start the composer Gearbox container with version 1.10.0 and run a shell.
+Create, and start the composer Gearbox container with version 1.4.3 and run a shell.
 
-`./launch shell composer:1.10.0`
+`./launch shell composer:1.4.3`
 
-`./launch shell composer:1.10.0 ls -l`
+`./launch shell composer:1.4.3 ls -l`
 
-`./launch shell composer:1.10.0 ps -eaf`
+`./launch shell composer:1.4.3 ps -eaf`
 
 
 ### Available commands
@@ -95,7 +96,7 @@ Running composer Gearbox container default command. If a container has a default
 
 `./composer -flag1 -flag2 variable`
 
-`./launch composer:1.10.0 -flag1 -flag2 variable`
+`./launch composer:1.4.3 -flag1 -flag2 variable`
 
 Gearbox containers may have multiple executables that can be run. The composer Gearbox container has the following available commands:
 - The default command will execute `composer` within the container.
