@@ -74,7 +74,7 @@ if ${COMPOSER} --no-interaction check-platform-reqs
 then
 	c_ok "Composer check-platform-reqs OK."
 else
-	c_err "Composer check-platform-reqs NOT OK."
+	c_warn "Composer check-platform-reqs WARNING."
 fi
 
 p_info "composer" "test finished."

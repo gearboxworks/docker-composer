@@ -37,4 +37,6 @@ then
 	mkdir -p /usr/local/bin; checkExit
 fi
 
+chown -fhR gearbox:gearbox /composer 2>/dev/null
+
 c_ok "Finished."
