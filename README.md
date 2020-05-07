@@ -77,13 +77,13 @@ Create, and start the composer Gearbox container. Run a shell.
 
 `./launch shell composer`
 
-Create, and start the composer Gearbox container with version 1.2.4 and run a shell.
+Create, and start the composer Gearbox container with version 1.10.0 and run a shell.
 
-`./launch shell composer:1.2.4`
+`./launch shell composer:1.10.0`
 
-`./launch shell composer:1.2.4 ls -l`
+`./launch shell composer:1.10.0 ls -l`
 
-`./launch shell composer:1.2.4 ps -eaf`
+`./launch shell composer:1.10.0 ps -eaf`
 
 
 ### Available commands
@@ -96,7 +96,7 @@ Running composer Gearbox container default command. If a container has a default
 
 `./composer -flag1 -flag2 variable`
 
-`./launch composer:1.2.4 -flag1 -flag2 variable`
+`./launch composer:1.10.0 -flag1 -flag2 variable`
 
 Gearbox containers may have multiple executables that can be run. The composer Gearbox container has the following available commands:
 - `composer` - will execute `composer` within the container.
