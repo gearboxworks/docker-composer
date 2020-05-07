@@ -1,7 +1,7 @@
 
 ################################################################################
 # WARNING: This file has been auto-generated. DO NOT EDIT: WARNING
-# Created on 2020-05-07T17:18:43+1000, using template:DockerfileRuntime.tmpl and json:gearbox.json
+# Created on 2020-05-07T18:26:38+1000, using template:DockerfileRuntime.tmpl and json:gearbox.json
 # Referenced Docker container for docker-composer based off gearboxworks/gearbox-base:alpine-3.11 with composer:1.10.0 overlayed.
 
 ARG VERSION=1.10.0
